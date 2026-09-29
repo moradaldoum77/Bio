@@ -4,16 +4,16 @@ Please do not remove or alter the credit to the original creator. If you wish to
 Thank you for respecting the work and effort that went into creating this code. */
 
 :root {
-    --primary: #6366f1;
-    --primary-dark: #4f46e5;
-    --secondary: #8b5cf6;
-    --accent: #10b981;
-    --dark: #0f172a;
-    --darker: #020617;
-    --light: #f8fafc;
-    --gray: #94a3b8;
-    --glass: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --primary: #7c83ff;
+    --primary-dark: #6366f1;
+    --secondary: #a78bfa;
+    --accent: #22c55e;
+    --dark: #18233a;
+    --darker: #08111f;
+    --light: #ffffff;
+    --gray: #c4cddd;
+    --glass: rgba(255, 255, 255, 0.10);
+    --glass-border: rgba(255, 255, 255, 0.20);
     --python-yellow: #ffd43b;
     --python-blue: #306998;
     --gradient-1: linear-gradient(135deg, #6366f1, #8b5cf6, #10b981);
@@ -97,9 +97,9 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.20) 0%, transparent 55%),
+        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.18) 0%, transparent 55%),
+        radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.15) 0%, transparent 55%);
 }
 
 .floating-elements {
@@ -116,7 +116,7 @@ body {
     position: absolute;
     border-radius: 50%;
     background: var(--gradient-1);
-    opacity: 0.05;
+    opacity: 0.10;
     filter: blur(40px);
 }
 
@@ -132,14 +132,14 @@ nav {
     width: 100%;
     z-index: 1000;
     padding: 20px 0;
-    background: rgba(15, 23, 42, 0.95);
+    background: rgba(18, 29, 49, 0.92);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--glass-border);
     transition: all 0.3s ease;
 }
 
 nav.scrolled {
-    background: rgba(15, 23, 42, 0.98);
+    background: rgba(18, 29, 49, 0.96);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     padding: 15px 0;
 }
@@ -233,7 +233,7 @@ nav.scrolled {
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: rgba(15, 23, 42, 0.98);
+    background: rgba(18, 29, 49, 0.96);
     backdrop-filter: blur(10px);
     border-left: 1px solid var(--glass-border);
     padding: 100px 30px 40px;
@@ -312,7 +312,7 @@ nav.scrolled {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 20px;
-    background: linear-gradient(to right, #f8fafc, #94a3b8);
+    background: linear-gradient(to right, #ffffff, #dbe4f5);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -528,7 +528,7 @@ section {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 15px;
-    background: linear-gradient(to right, #f8fafc, #94a3b8);
+    background: linear-gradient(to right, #ffffff, #dbe4f5);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -729,7 +729,7 @@ section {
 }
 
 footer {
-    background: rgba(2, 6, 23, 0.8);
+    background: rgba(8, 17, 31, 0.88);
     padding: 60px 0 30px;
     border-top: 1px solid var(--glass-border);
 }
@@ -968,3 +968,82 @@ a:active {
 Unauthorized copying, distribution, or modification of this code, in whole or in part, is strictly prohibited without prior written permission.
 Please do not remove or alter the credit to the original creator. If you wish to use this code for personal or commercial purposes, kindly contact the creator for permissions.
 Thank you for respecting the work and effort that went into creating this code. */
+
+
+/* Brighter visual theme
+   Keeps the original layout and animations while increasing contrast,
+   glow, glass visibility, and background colour intensity. */
+
+body {
+    background:
+        radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.10), transparent 35%),
+        radial-gradient(circle at 85% 25%, rgba(139, 92, 246, 0.09), transparent 35%),
+        linear-gradient(135deg, var(--darker), #101b30 55%, #111c32);
+}
+
+.background-animation {
+    opacity: 1;
+}
+
+.floating-element {
+    opacity: 0.14;
+    filter: blur(35px);
+}
+
+.floating-card,
+.glass-card,
+.timeline-content,
+.skill-category {
+    background: rgba(255, 255, 255, 0.11);
+    border-color: rgba(255, 255, 255, 0.22);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+}
+
+.floating-card:hover,
+.glass-card:hover,
+.timeline-content:hover,
+.skill-category:hover {
+    border-color: rgba(124, 131, 255, 0.45);
+    box-shadow:
+        0 24px 65px rgba(0, 0, 0, 0.25),
+        0 0 30px rgba(124, 131, 255, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.hero-text p,
+.section-title p {
+    color: #d1d8e6;
+}
+
+.nav-links a:hover,
+.mobile-nav a:hover {
+    color: #aeb5ff;
+}
+
+.location-chip,
+.skill-item {
+    background: rgba(124, 131, 255, 0.16);
+    border-color: rgba(124, 131, 255, 0.30);
+}
+
+.skill-item:hover {
+    background: rgba(124, 131, 255, 0.26);
+}
+
+footer {
+    background: rgba(8, 17, 31, 0.90);
+}
+
+.cta-button {
+    box-shadow:
+        0 10px 30px rgba(99, 102, 241, 0.35),
+        0 0 24px rgba(139, 92, 246, 0.12);
+}
+
+.cta-button:hover {
+    box-shadow:
+        0 15px 40px rgba(99, 102, 241, 0.48),
+        0 0 35px rgba(139, 92, 246, 0.18);
+}
